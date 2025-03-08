@@ -6,7 +6,6 @@ export default defineNuxtConfig({
   css: ['~/assets/css/index.css'],
   ssr: false,
   runtimeConfig: {
-    public: {}, // 客户端不可访问的配置项
     apiKey: process.env.NUXT_API_KEY, // 这里放在 private
   },
 });
