@@ -13,5 +13,6 @@ export default defineEventHandler(async (event) => {
       model: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B',
       messages: body.messages,
     },
+    timeout: 60000,
   });
 });
