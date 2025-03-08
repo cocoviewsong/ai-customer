@@ -6,7 +6,6 @@ export default defineEventHandler(async (event) => {
       subQuestion: {
         desc: 'flash产品系列售后说明...',
       },
-      isProductDesc: true,
     },
   };
 });

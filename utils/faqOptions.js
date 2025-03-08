@@ -125,7 +125,7 @@ const faqOptions = {
         content: content.desc,
         dataList: content.dataList,
         columns: content.columns,
-        useComponent: 'HotProduct',
+        useComponent: content.useComponent,
       },
     };
   },
@@ -383,7 +383,6 @@ const faqOptions = {
     return {
       type: 'desc',
       data: {
-        // content: `距离您最近的供应商是：<strong>${name}</strong>,地址是:<strong>${address}</strong>,手机号:<strong>${tel}</strong>,邮政编码是:<strong>${邮政编码}</strong>`,
         useComponent: 'DescList',
         info: [
           {

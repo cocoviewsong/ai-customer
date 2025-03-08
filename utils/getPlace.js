@@ -20,21 +20,20 @@ const haversineDistance = (lat1, lon1, lat2, lon2) => {
 
 const getClosestCountry = async () => {
   // 1. 获取用户 IP 地址的地理位置
-  const response = await fetch('https://ipapi.co/json/');
-  const responseData = await response.json();
+  const response = await $fetch('https://ipapi.co/json/');
 
   // 获取当前用户的经纬度
-  const userLat = responseData.latitude;
-  const userLon = responseData.longitude;
+  const userLat = response.latitude;
+  const userLon = response.longitude;
 
   console.log(`你的IP位置: ${userLat}, ${userLon}`);
 
-  const { data, success } = await getRecentSuppliers(userLat, userLon);
-  if (!success) return { success };
-  console.log('placeResponse!!!!!!!!!!!!!!!!!!!!!!!', data, success);
+  const { content, code } = await getRecentSuppliers();
+  if (code !== 200) return { success };
+  console.log('placeResponse!!!!!!!!!!!!!!!!!!!!!!!', content, code);
 
   // 2. 各个公司的经纬度
-  const countries = data;
+  const countries = content;
 
   // 3. 计算用户到各个公司的距离
   let minDistance = Infinity;

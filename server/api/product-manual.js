@@ -6,7 +6,6 @@ export default defineEventHandler(async (event) => {
       subQuestion: {
         desc: '产品数据手册,测试文本,官网上不能下载',
       },
-      isProductDesc: true,
     },
   };
 });

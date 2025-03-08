@@ -2,10 +2,7 @@ export default defineEventHandler(async (event) => {
   return {
     code: 200,
     content: {
-      title: '热门商品',
-      desc: `目前的热门商品有:<a target="_blank" href="https://www.gigadevice.com.cn/product/flash/product-series/spi-nor-flash/gd25uf64e">GD25UF</a>、<a target="_blank" href="https://www.gigadevice.com.cn/product/flash/product-series/spi-nand-flash/standard-qspi-nand/gd5f1gm7ue">GD5F1GM7</a>、<a target="_blank" href="https://www.gigadevice.com.cn/product/mcu/high-performance-mcus/gd32g5xx-series">GD32G5</a>、<a target="_blank" href="https://www.gigadevice.com.cn/product/mcu/high-performance-mcus/gd32h7xx-series/gd32h75e">GD32H75E</a>`,
-      isProductDesc: true,
-      hotProduct: true,
+      // 表格信息
       dataList: [
         {
           key: '1',
@@ -32,12 +29,14 @@ export default defineEventHandler(async (event) => {
           href: 'https://www.gigadevice.com.cn/product/flash/product-series/spi-nor-flash/gd25uf64e',
         },
       ],
+      // 表头信息
       columns: [
         {
           title: '热门商品',
           dataIndex: 'hotProduct',
           key: 'hotProduct',
           width: 100,
+          // // 超过width是否省略(可选参数)
           // ellipsis: true,
         },
         {
@@ -46,6 +45,8 @@ export default defineEventHandler(async (event) => {
           key: 'desc',
         },
       ],
+      // 前端采用哪个组件渲染数据
+      useComponent: 'HotProduct',
     },
   };
 });

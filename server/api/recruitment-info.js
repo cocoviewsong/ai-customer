@@ -2,11 +2,9 @@ export default defineEventHandler(async (event) => {
   return {
     code: 200,
     content: {
-      title: '招聘信息',
       subQuestion: {
         desc: '招聘信息',
       },
-      isProductDesc: true,
       recruitmentInfo: [
         {
           key: '1',
@@ -23,6 +21,7 @@ export default defineEventHandler(async (event) => {
           schoolRecruitmentHref: '#',
         },
       ],
+      // 前端采用哪个组件渲染数据
       useComponent: 'SendOffer',
     },
   };

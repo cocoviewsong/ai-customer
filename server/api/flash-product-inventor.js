@@ -6,7 +6,6 @@ export default defineEventHandler(async (event) => {
       subQuestion: {
         desc: '剩余一件',
       },
-      isProductDesc: true,
     },
   };
 });

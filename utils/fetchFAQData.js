@@ -52,14 +52,14 @@ export const getRecentSuppliers = () => $fetch(`/api/recent-suppliers`);
  *
  */
 export const getFlashProductAfterSales = () =>
-  $fetch(`/api/flash-product/after-sales`);
+  $fetch(`/api/flash-product-after-sales`);
 
 /**
  * 获取flash系列产品售后信息描述
  *
  */
 export const getFlashProductAfterSalesDesc = () =>
-  $fetch(`/api/flash-product/after-sales-desc`);
+  $fetch(`/api/flash-product-after-sales-desc`);
 
 /**
  * 获取flash系列产品库存信息
