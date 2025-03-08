@@ -126,7 +126,7 @@ const isComponent = (content) => {
   return (
     typeof content === 'object' &&
     content !== null &&
-    typeof content.render === 'function'
+    ('setup' in content || '__v_skip' in content)
   );
 };
 </script>

@@ -1,9 +1,20 @@
-import type { Directive } from 'vue';
-
-const typingDirective: Directive = {
+const typingDirective = {
   mounted(el, binding) {
+    if (typeof binding.value !== 'string') {
+      console.warn(
+        '[typingDirective] binding.value 不是字符串，跳过动画:',
+        binding.value
+      );
+      return;
+    }
+
     // 预处理：去掉 HTML 标签之间的空格和换行
-    const rawHtml = binding.value.replace(/>\s+</g, '><').trim();
+    const rawHtml =
+      typeof binding.value === 'string'
+        ? binding.value.replace(/>\s+</g, '><').trim()
+        : '';
+
+    console.log('binding.value:', binding.value, typeof binding.value);
 
     let index = 0;
     let isTag = false;

@@ -23,7 +23,7 @@
             <!-- <span> 兆易创新客服 </span> -->
           </div>
           <div class="chat-messages" id="chatMessages" ref="messagesContainer">
-            <Question :chatMessageList="chatMessageList" :demo="5"></Question>
+            <Question :chatMessageList="chatMessageList"></Question>
             <a-skeleton
               avatar
               active
@@ -73,8 +73,6 @@ import HotProduct from './components/HotProduct.vue';
 import DescList from './components/DescList.vue';
 import SendOffer from './components/SendOffer.vue';
 import LayoutControl from './components/LayoutControl.vue';
-
-import fetchAI from './utils/fetchAI.js';
 import { getFAQData } from './utils/fetchFAQData.js';
 
 const BOT_AVATAR = 'https://www.gigadevice.com.cn/favicon.png';
