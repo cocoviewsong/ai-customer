@@ -45,4 +45,8 @@ a.desc:hover {
   .ant-comment-content-author {
     justify-self: end;
   }
+
+  .ant-comment .ant-comment-inner {
+    padding: 5px 0;
+  }
 }

@@ -20,7 +20,6 @@
               :preview="false"
               src="https://www.gigadevice.com.cn/Public/Uploads/uploadfile/images/20221012/00000000001-201.png"
             />
-            <!-- <span> 兆易创新客服 </span> -->
           </div>
           <div class="chat-messages" id="chatMessages" ref="messagesContainer">
             <Question :chatMessageList="chatMessageList"></Question>
@@ -290,6 +289,7 @@ const getBotResponse = async (userInputText) => {
       messages: [{ role: 'user', content: userInputText }],
     },
   });
+
   return choices[0].message.content;
 };
 

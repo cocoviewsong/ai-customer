@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
           schoolRecruitmentHref: '#',
         },
       ],
-      // 前端采用哪个组件渲染数据
+      // 前端采用哪个组件渲染数据(可选参数)
       useComponent: 'SendOffer',
     },
   };

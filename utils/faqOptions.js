@@ -125,7 +125,7 @@ const faqOptions = {
         content: content.desc,
         dataList: content.dataList,
         columns: content.columns,
-        useComponent: content.useComponent,
+        useComponent: content.useComponent || 'HotProduct',
       },
     };
   },
@@ -425,7 +425,9 @@ const faqOptions = {
     return {
       type: 'desc',
       data: {
-        useComponent: content.useComponent,
+        // 万一传了字符串
+        // useComponent: content.useComponent ?? 'SendOffer',
+        useComponent: content.useComponent || 'SendOffer',
         recruitmentInfo: content.recruitmentInfo,
       },
     };

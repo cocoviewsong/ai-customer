@@ -29,6 +29,7 @@
                   :supplierInformation="item.info"
                   :recruitmentInfo="item.recruitmentInfo"
                 />
+
                 <div v-else v-typing="item.content"></div>
               </div>
             </template>
@@ -139,10 +140,15 @@ const isComponent = (content) => {
 .ant-list-item:first-child {
   padding-top: 0;
 }
+
 .chat-bot {
   .ant-comment-nested span {
     color: #999;
     margin-right: 5px;
   }
+}
+
+.comment-list .chat-bot .ant-comment .ant-comment-inner {
+  padding: 5px 0;
 }
 </style>
